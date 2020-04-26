@@ -1,15 +1,16 @@
-<div class="container">
+<div class="container" *ngIf = "!logged">
     <section id="content">
         <form action="">
             <h1>Login Form</h1>
             <div>
-                <input type="text" placeholder="Username" required="" id="username" />
+                <input type="text" placeholder="Username" required="" id="username" [(ngModel)]="username" />
             </div>
             <div>
-                <input type="password" placeholder="Password" required="" id="password" />
+                <input type="password" placeholder="Password" required="" id="password" [(ngModel)]="password"/>
             </div>
             <div>
-                <input type="submit" value="Log in" />
+                <button (click)="login()">Login</button>
+                <input type="submit" value="Log in" (click)="login()"/>
                 <a href="#">Lost your password?</a>
                 <a href="#">Register</a>
             </div>

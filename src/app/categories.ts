@@ -1,3 +1,4 @@
+/*
 export const categories = [
   {
     id: 1,
@@ -31,4 +32,4 @@ export const categories = [
     id: 5,
     name: 'Ужасы'
   }
-]
+*/

@@ -20,13 +20,13 @@ export class CategoryComponent implements OnInit {
   ) {
     this.router.events.subscribe((value => {
       this.getMovies();
-      this.getCategory();
+//     this.getCategory();
     }));
   }
 
   ngOnInit() {
     this.getMovies();
-    this.getCategory();
+    //this.getCategory();
   }
 
   getMovies() {
@@ -34,9 +34,10 @@ export class CategoryComponent implements OnInit {
     this.movieService.getMoviesByCategoryId(id).subscribe(movies => this.movies = movies);
   }
 
+  /*
   getCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.categoryService.getCategory(id).subscribe(category => this.category = category);
   }
-
+*/
 }

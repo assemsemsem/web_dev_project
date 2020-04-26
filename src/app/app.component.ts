@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CategoryService } from './category.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+  title = 'ServiceGroup2'
+
+  logged = false;
+
+  constructor(private categoryService: CategoryService) { }
   
 }
 
